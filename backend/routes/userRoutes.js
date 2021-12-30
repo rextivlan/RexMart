@@ -4,11 +4,12 @@ import {
   authUser,
   getUserProfile,
   registerUser,
+  updateUserProfile,
 } from "../controllers/userController.js";
 import { auth } from "../middleware/authMiddleware.js";
 
-router.route("/", registerUser).post(registerUser);
+router.route("/").post(registerUser);
 router.post("/login", authUser);
-router.route("/profile").get(auth, getUserProfile);
+router.route("/profile").get(auth, getUserProfile).put(auth, updateUserProfile);
 
 export default router;

@@ -6,7 +6,6 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
-//import { redirect } from "express/lib/response";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -49,7 +48,7 @@ const LoginScreen = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
