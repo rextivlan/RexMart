@@ -23,6 +23,9 @@ const CartScreen = () => {
 
   const dispatch = useDispatch();
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
@@ -37,7 +40,11 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
-    navigate(`/login/shipping`);
+    if (userInfo) {
+      navigate("/shipping");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
