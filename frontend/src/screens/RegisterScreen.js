@@ -55,7 +55,7 @@ const RegisterScreen = () => {
         <Form.Group controlId="phone" className="py-3">
           <Form.Label>Phone Number</Form.Label>
           <Form.Control
-            type="string"
+            type="text"
             placeholder="Enter Phone Number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
