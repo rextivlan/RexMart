@@ -44,16 +44,6 @@ const PaymentScreen = () => {
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>
           </Col>
-          <Col>
-            <Form.Check
-              type="radio"
-              label="Payment on Delivery"
-              id="POD"
-              name="paymentMethod"
-              value="POD"
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check>
-          </Col>
         </Form.Group>
         <Button type="submit" variant="primary">
           Continue
